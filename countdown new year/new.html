@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown to NEW YEAR</title>
+  <link rel="stylesheet" href="year.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2><span>Countdown to New Year</span>2021</h2>
+    <div class="countdown">
+      <div id="day">NM</div>
+      <div id="hour">NM</div>
+      <div id="minute">NM</div>
+      <div id="second">NM</div>
+    </div>
+  </div>
+  <script>
+
+    var countDownDate = new Date("Jan 1, 2021 00:00:00").getTime();
+
+    var x = setInterval(function () {
+
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      document.getElementById("day").innerHTML = days + "d";
+      document.getElementById("hour").innerHTML = hours + "h";
+      document.getElementById("minute").innerHTML = minutes + "m";
+      document.getElementById("second").innerHTML = seconds + "s";
+    },1000);
+  </script>
+</body>
+
+</html>

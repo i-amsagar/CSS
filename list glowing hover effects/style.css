@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+.main_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    background: #f1a6a6;
+}
+li{
+    display: inline-block;
+    padding: 15px;    
+    color: #fff;
+    background: transparent;
+    list-style: none;
+    margin: 15px;
+    position: relative;
+    text-align: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+li:hover{
+    transform: translate(20px);
+    color: #111;
+}
+li::before, li::after{
+    content: '';
+    position: absolute;
+    transition: all 0.4s;
+}
+li::before{
+    width: 20px;
+    height: 100%;
+    top: 0;
+    left: -30px;
+}
+li::after{
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: 0;
+}
+li:hover::before, li:hover::after{
+    background: #00ffff;
+    box-shadow: 0 0 10px #00ffff;
+}

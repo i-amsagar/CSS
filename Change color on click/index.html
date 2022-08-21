@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changing On Click - Sagar Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul class="colors">
+        <li class="c1"></li>
+        <li class="c2"></li>
+        <li class="c3"></li>
+        <li class="c4"></li>
+        <li class="c5"></li>
+    </ul>
+    <div class="tint"></div>
+    <p>Background Color Changing On <Span>Click</Span> Using <br><span>HTML & CSS</span></p>
+
+    <script>
+        var colorPickers = document.querySelectorAll('.colors li');
+        [].forEach.call(colorPickers, function (picker) {
+            picker.addEventListener('click', changeColor)
+        });
+        function changeColor() {
+            var colorValue = window.getComputedStyle(this, null).backgroundColor;
+
+            var tintColor = colorValue.replace(')', ', .5)');
+
+            tintColor = tintColor.replace('rgba', 'rgba');
+
+            document.querySelector('.tint').style.backgroundColor = tintColor;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #70bbbb;
+    height: 200vw;
+}
+
+.content {
+    color: #fff;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 60px 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.content h1 {
+    color: #111;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00ffaa), to(#0089ff));
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(to right, #91d3d3, #91d3d3 1px, #91d3d3 1px, #fff);
+}
